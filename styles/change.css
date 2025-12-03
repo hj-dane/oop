@@ -1,0 +1,23 @@
+body {
+    background-image: url('../assets/bg.jpg');
+    background-size: 1980px 990px;      /* or contain */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* optional */
+}
+
+.form-container {
+    width: 500px;
+    margin-left: 400px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-control{
+    background-color: #cecece;
+    transition: all 0.2s ease;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+}
