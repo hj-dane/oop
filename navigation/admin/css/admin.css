@@ -1,0 +1,477 @@
+:root {
+    --primary-color: #135b96;
+    --secondary-color: #2b3864;
+    --accent-color: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --background-light: #f8f9fa;
+    --card-bg: #ffffff;
+    --text-dark: #333;
+    --text-light: #fff;
+}
+
+body {
+    background: var(--background-light);
+    color: var(--text-dark);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+}
+
+/* Sidebar Brand (Banner) */
+.brand {
+    display: flex;
+    align-items: center; /* Centers icon and text */
+    justify-content: center; /* Centers content in sidebar */
+    width: 100%;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    gap: 10px; /* Adds spacing between icon and text */
+}
+
+/* Icon inside the banner */
+.brand i {
+    font-size: 28px; /* Adjust icon size */
+    color: white;
+}
+
+/* Collapsed sidebar brand */
+.sidebar.collapsed .brand {
+    justify-content: center; /* Keep centered when collapsed */
+    padding: 15px 0;
+}
+
+/* Hide text in collapsed mode */
+.sidebar.collapsed .brand .full-text {
+    display: none;
+}
+
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(135deg, #135b96, #182242);
+    color: white;
+    transition: width 0.3s ease;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+}
+
+/* Sidebar links */
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    width: 100%;
+    transition: all 0.3s ease;
+    gap: 12px; /* Ensures spacing between icon and text */
+}
+
+/* Sidebar Icons */
+.sidebar a i {
+    min-width: 24px; /* Ensure icons have proper spacing */
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Hover effect */
+.sidebar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Collapsed Sidebar */
+.sidebar.collapsed {
+    width: 60px;
+    align-items: center; /* Center items in collapsed mode */
+}
+
+/* Hide text in collapsed mode */
+.sidebar.collapsed a span {
+    display: none;
+}
+
+/* Ensure icons stay centered in collapsed mode */
+.sidebar.collapsed a {
+    justify-content: center;
+    padding: 12px 0;
+}
+
+/* Logout button */
+.logout-btn {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    padding: 12px 15px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.logout-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.content {
+    margin-left: 260px;
+    padding: 20px;
+    width: 100%;
+    transition: margin-left 0.3s;
+}
+
+.sidebar.collapsed + .content {
+    margin-left: 80px;
+}
+
+.navbar {
+    background: var(--card-bg);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggle-sidebar {
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.user-details {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 8px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-details i {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.user-details p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.clock-widget {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+.clock-widget i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.welcome-banner {
+    background: var(--accent-color);
+    color: var(--text-light);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.card-custom {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card-custom:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-value {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--primary-color);
+} 
+
+/* Datatable Theme Styling */
+.dataTables_wrapper {
+    background: var(--card-bg) !important; /* White background */
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Table Header */
+table.dataTable thead {
+    background: var(--primary-color) !important;
+    color: var(--text-light) !important;
+}
+
+/* Table Header Cells */
+table.dataTable thead th {
+    color: var(--text-light) !important;
+    font-weight: bold;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Table Rows */
+table.dataTable tbody tr {
+    background: var(--card-bg) !important;
+    color: var(--text-dark) !important;
+}
+
+/* Alternating Row Colors */
+table.dataTable tbody tr:nth-child(even) {
+    background: rgba(106, 17, 203, 0.1) !important; /* Light Primary Tint */
+}
+
+/* Hover Row Effect */
+table.dataTable tbody tr:hover {
+    background: rgba(106, 17, 203, 0.2) !important;
+}
+
+/* Table Borders */
+table.dataTable, table.dataTable th, table.dataTable td {
+    border-color: var(--primary-color) !important;
+}
+
+/* Pagination */
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    background: var(--primary-color) !important;
+    color: var(--text-light) !important;
+    border-radius: 5px;
+    margin: 2px;
+    padding: 5px 10px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background: var(--secondary-color) !important;
+    color: var(--text-light) !important;
+}
+
+/* Search Box */
+.dataTables_wrapper .dataTables_filter input {
+    border: 2px solid var(--primary-color) !important;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.active>.page-link, .page-link.active {
+    z-index: 3;
+    color: #111;
+    background-color: #fff;
+    border-color: var(--bs-pagination-active-border-color);
+    border-radius: 5px;
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: var(--bs-pagination-padding-y) var(--bs-pagination-padding-x);
+    font-size: var(--bs-pagination-font-size);
+    color: var(--bs-pagination-color);
+    text-decoration: none;
+    background-color: #fff;
+    border: var(--bs-pagination-border-width) solid var(--bs-pagination-border-color);
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    border-radius: 5px;
+}
+
+/* Length Dropdown */
+.dataTables_wrapper .dataTables_length select {
+    border: 2px solid var(--primary-color) !important;
+    border-radius: 5px;
+    padding: 5px;
+    width: 60px !important; /* Adjust width as needed */
+    min-width: 60px !important;
+    max-width: 120px !important;
+    text-align: left;
+}
+
+/* Approve and Deny Buttons */
+.approve-btn {
+    background: var(--primary-color) !important;
+    color: var(--text-light) !important;
+    border-radius: 5px;
+}
+
+.deny-btn {
+    background: var(--secondary-color) !important;
+    color: var(--text-light) !important;
+    border-radius: 5px;
+}
+
+.restore-btn {
+    background: var(--primary-color) !important;
+    color: var(--text-light) !important;
+    border-radius: 5px;
+}
+
+.deactivate-btn {
+    background: var(--primary-color) !important;
+    color: var(--text-light) !important;
+    border-radius: 5px;
+}
+
+.reset-btn {
+    background: var(--primary-color) !important;
+    color: var(--text-light) !important;
+    border-radius: 5px;
+}
+
+
+.activate-btn {
+    background: var(--primary-color) !important;
+    color: var(--text-light) !important;
+    border-radius: 5px;
+}
+
+
+
+.approve-btn:hover {
+    background: var(--secondary-color) !important;
+}
+
+.deny-btn:hover {
+    background: var(--primary-color) !important;
+}
+
+.restore-btn:hover {
+    background: var(--primary-color) !important;
+}
+
+.deactivate-btn:hover {
+    background: var(--primary-color) !important;
+}
+
+.reset-btn:hover {
+    background: var(--primary-color) !important;
+}
+
+.activate-btn:hover {
+    background: var(--primary-color) !important;
+}
+
+
+
+
+
+.sidebar .link-active {
+    background-color: #e7e7e7;
+    border-radius: 8px;
+}
+
+
+.sidebar .link-active:hover {
+    transition: 0.2s ease;
+    background-color: #e7e7e7;
+    border-radius: 8px;
+}
+
+.sidebar .link-active i {
+    color: #111;
+}
+
+.sidebar .link-active span {
+    color: #111;
+}
+
+.form-control {
+    border: 1px solid #a8a8a8;
+}
+
+
+/* document buttons */
+
+
+.edit-btn {
+    background: var(--primary-color) !important;
+    color: var(--text-light) !important;
+    border-radius: 5px;
+}
+
+.delete-btn {
+    background: var(--primary-color) !important;
+    color: var(--text-light) !important;
+    border-radius: 5px;
+}
+
+.edit-btn:hover {
+    background: var(--primary-color) !important;
+}
+
+.delete-btn:hover {
+    background: var(--primary-color) !important;
+}
+
+    #accountsTable {
+        width: 100% !important;
+    }
+
+    .sidebar {
+        width: 240px;
+        transition: transform .25s ease, left .25s ease;
+    }
+    .content {
+        margin-left: 240px;
+        transition: margin-left .25s ease;
+    }
+
+    @media (max-width: 991.98px) {
+        .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        transform: translateX(-100%);
+        z-index: 1045; 
+        }
+        .sidebar.show {
+        transform: translateX(0);
+        }
+        .content {
+        margin-left: 0 !important;
+        }
+        .table td, .table th { white-space: nowrap; }
+    }
+
+    .sidebar-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(15, 23, 42, .35); /* slate + alpha */
+        z-index: 1040;
+    }
+    .sidebar-overlay.show {
+        display: block;
+    }
+
+    /* Force table header text to black */
+    table.dataTable thead th {
+        color: #000 !important;
+        background-color: #f8f9fa !important; /* light gray background */
+    }
