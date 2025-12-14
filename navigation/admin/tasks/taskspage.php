@@ -95,24 +95,36 @@ $lastname   = $_SESSION['lastname'] ?? '';
       <span class="full-text">InSync</span>
     </div>
 
-    <a href="../dashboard.php" class=" mb-2 mt-3"><i class="fas fa-users-cog me-2"></i> <span>Dashboard</span></a>
-    <a href="../projects/projectpage.php" class="mb-2 mt-1"><i class="fas fa-folder me-2"></i> <span>Manage Project</span></a>
-    
-    <a href="../tasks/monitortaskspage.php" class="link-active mb-2 mt-1 text-truncate">
-      <i class="fas fa-eye me-2"></i> <span>Monitor Tasks</span>
+    <a href="../dashboard.php" class="mb-2 mt-3">
+      <i class="fas fa-users-cog me-2"></i> <span>Dashboard</span>
     </a>
-    <a href="../tasks/mytaskspage.php" class=" mb-2 mt-1 text-truncate">
-      <i class="fas fa-tasks me-2"></i> <span>My Tasks</span>
+
+    <a href="../projects/projectpage.php" class="mb-2 mt-1">
+      <i class="fas fa-folder me-2"></i> <span>Manage Projects</span>
     </a>
-    <a href="../tasks/taskhistorypage.php" class="mb-2 mt-1 text-truncate">
+    <a href="taskspage.php" class="link-active mb-2 mt-1 text-truncate">
+      <i class="fas fa-tasks me-2"></i> <span>Monitor Tasks</span>
+    </a>
+    <a href="taskhistorypage.php" class="mb-2 mt-1 text-truncate">
       <i class="fas fa-history me-2"></i> <span>Task History</span>
     </a>
-    <a href="../announcement/announcementpage.php" class="mb-2 mt-1">
-      <i class="fas fa-bullhorn me-2"></i> <span>Announcements</span>
-    </a> 
-    <a href="../feedback/feedbackpage.php" class="mb-2 mt-1"><i class="fas fa-phone me-2"></i> <span>Feedback</span></a>
+
+    <a href="../logs/loghistorypage.php" class=" mb-2 mt-1 text-truncate">
+      <i class="fas fa-book me-2"></i> <span>Log History</span>
+    </a>
+    <a href="../account/accountpage.php" class="mb-2 mt-1">
+      <i class="fas fa-user me-2"></i> <span>Manage Users</span>
+    </a>
+    <a href="../departments/departmentpage.php" class="mb-2 mt-1 text-truncate">
+      <i class="fas fa-home me-2"></i> <span>Departments</span>
+    </a>
+    <a href="../contact/contactpage.php" class="mb-2 mt-1">
+      <i class="fas fa-phone me-2"></i> <span>Messages</span>
+    </a>
+    <a href="../profile/profile.php" class="mb-2 mt-1">
+      <i class="fas fa-user-circle me-2"></i> <span>Profile</span>
+    </a>
     
-    <a href="../profile/profile.php" class="mb-2 mt-1"><i class="fas fa-user me-2"></i> <span>Profile</span></a>
     <a href="../reports/reportspage.php" class=" mb-2 mt-1 text-truncate">
       <i class="fas fa-chart-bar me-2"></i> <span>Reports</span>
     </a>
@@ -121,6 +133,7 @@ $lastname   = $_SESSION['lastname'] ?? '';
     </div>
   </div>
   <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
 
   <!-- Main Content -->
   <div class="content" id="content">
